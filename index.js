@@ -19,8 +19,8 @@ cloudinary.config({
 });
 
 const corsOptions = {
-    origin: ['https://ecommerceweb-frontend.vercel.app','https://cornellius-ad.vercel.app', 'http://localhost:5173', 'http://localhost:5174', 'https://js.stripe.com', 'https://checkout.stripe.com/'],// frontend IP and port
-    default: 'https://ecommerceweb-frontend.vercel.app',
+    origin: ['https://cornellius-inky.vercel.app', 'https://cornellius-ad.vercel.app','http://localhost:5173', 'http://localhost:5174', 'https://js.stripe.com', 'https://checkout.stripe.com/'],// frontend IP and port
+    default: 'https://cornellius-inky.vercel.app',
     optionsSuccessStatus: 200,
 
 
@@ -317,8 +317,8 @@ app.post('/create-payment', async (req, res) => {
         payment_method_types: ["card"],
         line_items: lineItem,
         mode: "payment",
-        success_url: "https://ecommerceweb-frontend.vercel.app/",
-        cancel_url: "https://ecommerceweb-frontend.vercel.app/",
+        success_url: "https://cornellius-inky.vercel.app/",
+        cancel_url: "https://cornellius-inky.vercel.app/",
     })
     console.log(session.url);
     console.log(lineItem[0].price_data.product_data);
